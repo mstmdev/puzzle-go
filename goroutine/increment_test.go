@@ -1,3 +1,5 @@
+// Output the assembly code with the following command: go tool compile -S increment_test.go
+
 package goroutine
 
 import (
