@@ -15,6 +15,7 @@ func TestIncrement(t *testing.T) {
 		}
 	}()
 	time.Sleep(time.Second)
+	// Output: num=0
 	fmt.Printf("num=%d\n", num)
 }
 
@@ -29,6 +30,7 @@ func TestIncrement_With_UnreachableCode(t *testing.T) {
 		}
 	}()
 	time.Sleep(time.Second)
+	// Output: num=464742893
 	fmt.Printf("num=%d\n", num)
 }
 
@@ -40,5 +42,6 @@ func TestIncrement_With_Atomic(t *testing.T) {
 		}
 	}()
 	time.Sleep(time.Second)
+	// Output: num=172373819
 	fmt.Printf("num=%d\n", atomic.LoadInt64(&num))
 }
