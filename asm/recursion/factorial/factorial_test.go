@@ -1,6 +1,8 @@
-package recursion
+package factorial
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestFactorial(t *testing.T) {
 	testCases := []struct {

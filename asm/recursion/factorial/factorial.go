@@ -1,4 +1,4 @@
-package recursion
+package factorial
 
 // Factorial a recursion implementation for factorial
 func Factorial(num uint) (result uint)
