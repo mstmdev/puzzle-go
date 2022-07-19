@@ -22,7 +22,7 @@ func TestAccessPrivateMember(t *testing.T) {
 			actualName := account.Name
 			actualAge := GetAge(account)
 			actualPassword := GetPassword(account)
-			if tc.age != actualAge || tc.password != actualPassword {
+			if tc.name != actualName || tc.age != actualAge || tc.password != actualPassword {
 				t.Errorf("expect => name:%s age:%d password:%s actual=> name:%s age:%d password:%s", tc.name, tc.age, tc.password, actualName, actualAge, actualPassword)
 			} else {
 				t.Logf("name:%s age:%d password:%s", actualName, actualAge, actualPassword)
