@@ -81,14 +81,12 @@ func (hm *HashMap) getOverflowCount(overflow uintptr) int {
 }
 
 func (hm *HashMap) dataList(bucket bmap) []Data {
-	// TODO
-	if bucket.tophash[0] <= minTopHash {
+	if bucket.tophash[0] < minTopHash {
 		return nil
 	}
 	var dataList []Data
 	for i, bit := range bucket.tophash {
-		if bit > minTopHash {
-			// TODO
+		if bit >= minTopHash {
 			if bucket.keys[i] != nil && bucket.elems[i] != nil {
 				dataList = append(dataList, newData(bucket.keys[i], bucket.elems[i]))
 			}
